@@ -1,11 +1,10 @@
 package com.epam.mjc;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
-import org.junit.Test;
+import static org.junit.Assert.*;
 
 
 public class StudentManagerTest {
@@ -46,7 +45,6 @@ public class StudentManagerTest {
   @Test
   public void testIDsNotChangedV2() {
     assertEquals(Student.ARTUR, manager.find(Arrays.stream(Student.values()).map(Student::getId).max(Long::compare).get()));
-
   }
 
 }
